@@ -1,9 +1,4 @@
-import { Image, StyleSheet, Platform, SafeAreaView } from "react-native";
-
-import { HelloWave } from "@/components/HelloWave";
-import ParallaxScrollView from "@/components/ParallaxScrollView";
-import { ThemedText } from "@/components/ThemedText";
-import { ThemedView } from "@/components/ThemedView";
+import { StyleSheet, View } from "react-native";
 import { useThemeColor } from "@/hooks/useThemeColor";
 
 export default function ScreenContainer({
@@ -13,11 +8,7 @@ export default function ScreenContainer({
 }) {
   const backgroundColor = useThemeColor({}, "background");
 
-  return (
-    <SafeAreaView style={[{ backgroundColor }, styles.parent]}>
-      {children}
-    </SafeAreaView>
-  );
+  return <View style={[{ backgroundColor }, styles.parent]}>{children}</View>;
 }
 
 const styles = StyleSheet.create({
