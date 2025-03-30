@@ -1,3 +1,7 @@
+import { SQLiteDatabase } from "expo-sqlite";
+import { CREATE_SPACES_TABLE } from "./tables/spaces/createSpacesTable";
+import { CREATE_TASKS_TABLE } from "./tables/tasks/createTasksTable";
+
 export async function migrateDbIfNeeded(db: SQLiteDatabase) {
   // Bump this to 2 (or higher) to reflect your new schema version
   const DATABASE_VERSION = 2;
@@ -19,7 +23,6 @@ export async function migrateDbIfNeeded(db: SQLiteDatabase) {
       PRAGMA journal_mode = WAL;
 
       ${CREATE_SPACES_TABLE}
-      ${CREATE_ITEMS_TABLE}
       ${CREATE_TASKS_TABLE}
     `);
     currentDbVersion = 2; // or set directly to DATABASE_VERSION
