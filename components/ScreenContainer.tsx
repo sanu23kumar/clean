@@ -23,5 +23,6 @@ export default function ScreenContainer({
 const styles = StyleSheet.create({
   parent: {
     flex: 1,
+    paddingBottom: 100,
   },
 });
