@@ -1,7 +1,0 @@
-
-export const CREATE_LOCATIONS_TABLE = `
-  CREATE TABLE IF NOT EXISTS locations (
-    id INTEGER PRIMARY KEY NOT NULL,
-    name TEXT NOT NULL
-  );
-`;
