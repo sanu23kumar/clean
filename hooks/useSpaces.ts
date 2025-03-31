@@ -1,12 +1,6 @@
 import { useState, useEffect } from "react";
 import { useSQLiteContext } from "expo-sqlite";
-import {
-  addSpace,
-  deleteSpace,
-  getSpaces,
-  getSpacesById,
-  Space,
-} from "@/db/tables/spaces";
+import { addSpace, deleteSpace, getSpaces, Space } from "@/db/tables/spaces";
 import { getTasksByItemId, Task } from "@/db/tables/tasks";
 
 export function useSpaces(parent_id: number | null) {
