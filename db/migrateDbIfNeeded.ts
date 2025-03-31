@@ -1,6 +1,6 @@
 import { SQLiteDatabase } from "expo-sqlite";
-import { CREATE_SPACES_TABLE } from "./tables/spaces/createSpacesTable";
-import { CREATE_TASKS_TABLE } from "./tables/tasks/createTasksTable";
+import { CREATE_SPACES_TABLE } from "./tables/spaces";
+import { CREATE_TASKS_TABLE } from "./tables/tasks";
 
 export async function migrateDbIfNeeded(db: SQLiteDatabase) {
   // Bump this to 2 (or higher) to reflect your new schema version
